@@ -1,2 +1,2 @@
 # WebTest-Javascript
-web開発のテストでやったやつ
+web開発のJavascriptのテストでやったやつ
