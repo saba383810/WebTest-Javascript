@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="sample.js"></script>
+</head>
+<body>
+    <h1>ボタン</h1>
+    <h2 id="target">LAST EXAM</h2>
+    <input type="button" value=" 赤 " onclick="changeRedColor('target');" style="width: 60px;"  />
+    <input type="button" value=" 青 " onclick="changeBlueColor('target');" style="width: 60px;" />
+</body>
+<script>
+    function changeRedColor(idname){
+        var obj = document.getElementById(idname);
+        obj.style.color = 'Red';
+    }
+    function changeBlueColor(idname){
+        var obj = document.getElementById(idname);
+        obj.style.color = 'Blue';
+    } 
+</script>
+</html>

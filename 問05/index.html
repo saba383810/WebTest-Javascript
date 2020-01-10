@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>計算</h1>
+    <script>
+        var ans;
+        var rand1 = Math.floor( Math.random() * 99 )+1;
+        var rand2 = Math.floor( Math.random() * 99 )+1;
+        document.write("<h3>",rand1,"</h3>");
+        document.write("<h3>",rand2,"</h3>");
+        if(rand1<rand2){
+            ans = rand2;
+        }else{
+            ans = rand1;
+        }
+        document.write("<h3> 大きい値は",ans,"です。</h3>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>平均値にマーク</h1>
+
+    <script>
+        var arr = [];
+        var sum = 0;
+        var avg;
+        for(var i = 0; i<10;i++){
+            var random = Math.floor( Math.random() * 99) + 1;
+            arr.push(random);
+            sum += random;
+        }
+        avg = sum/10;
+        document.write("平均値 : ",avg);
+        for(var i =  0;i<10;i++){
+            
+            if(avg<arr[i]) document.write("<p style='color: red;'>",arr[i],"</p>");
+            else document.write("<p>",arr[i],"</p>");
+        }
+    </script>
+</body>
+</html>

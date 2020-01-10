@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>簡易計算機</h1>
+
+    <form name="form1" id="id_form1" action="">
+        <label>入力値 : </label>
+        <input name="textBox1" id="id_textBox1" type="text" value="" />
+        <input name="textBox1" id="id_textBox2" type="text" value="" />
+        <br>
+        <input type="radio" name="example"  value="1" checked>加算
+        <input type="radio" name="example"  value="2">減算
+        <input type="radio" name="example"  value="3">乗算
+        <input type="radio" name="example"  value="4">除算
+        <br>
+        <input type="button" value="計算" onclick="onButtonClick();" />
+    </form>
+    <hr/>
+    <div id="output"></div>
+</body>
+
+<script type="text/javascript" language="javascript">
+    function onButtonClick() {
+        var ans;
+        target = document.getElementById("output");
+        var num1 = Number(document.forms.id_form1.id_textBox1.value);
+        var num2 = Number(document.forms.id_form1.id_textBox2.value);
+        var color1 = document.form1.example.value;  
+        switch(color1) {
+            case "1":
+                ans = num1+num2;
+            break;
+            case "2":
+                ans = num1-num2;
+            break;
+            case "3":
+                ans = num1 * num2;
+            break;
+            case "4":
+                ans = num1/num2;
+            break;
+            default:ans = "正しく入力してね！";
+      }
+      target.innerText = ans;
+      //target.innerText = document.id_form1.id_textBox1.value;//これでもOK
+    }
+</script>
+</html>
